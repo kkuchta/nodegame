@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20130701051923) do
   create_table "paths", force: true do |t|
     t.integer  "start_node_id"
     t.integer  "end_node_id"
-    t.string   "state"
+    t.string   "state",             default: "open"
     t.string   "start_description"
     t.string   "end_description"
     t.datetime "created_at"

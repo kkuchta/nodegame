@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  startNodeID: 1
-  endNodeID: 1
-  state: MyString
-  startDescription: MyString
-  endDescription: MyString
+  start_node_id: 1
+  end_node_id: 2
+  state: "open"
+  start_description: MyString
+  end_description: MyString
 
 two:
-  startNodeID: 1
-  endNodeID: 1
-  state: MyString
-  startDescription: MyString
-  endDescription: MyString
+  start_node_id: 2
+  end_node_id: 1
+  state: "open"
+  start_description: MyString
+  end_description: MyString
