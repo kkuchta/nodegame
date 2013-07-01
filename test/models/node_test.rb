@@ -11,10 +11,12 @@ class NodeTest < ActiveSupport::TestCase
     b = Node.create
     a_to_b = Path.create( { start_node: a, end_node: b } )
     b_to_a = Path.create( { start_node: b, end_node: a } )
+    c_to_d = Path.create( { start_node: Node.create, end_node: Node.create } )
 
-    #Rails.logger.info "a=" + a.inspect
-    #Rails.logger.info "a_to_b=" + a_to_b.inspect
-    #Rails.logger.info "a.exits=" + a.exits.inspect
     assert_same( a.exits.first.id, a_to_b.id )
+    assert_equal( a.exits.count, 1 )
+
+    assert_same( b.exits.first.id, b_to_a.id )
+    assert_equal( b.exits.count, 1 )
   end
 end
