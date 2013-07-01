@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  startNodeID: 1
+  endNodeID: 1
+  state: MyString
+  startDescription: MyString
+  endDescription: MyString
+
+two:
+  startNodeID: 1
+  endNodeID: 1
+  state: MyString
+  startDescription: MyString
+  endDescription: MyString
