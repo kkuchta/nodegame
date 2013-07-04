@@ -3,11 +3,11 @@
 <table>
   <thead>
     <tr>
-      <th>Startnodeid</th>
-      <th>Endnodeid</th>
+      <th>start_node_id</th>
+      <th>end_node_id</th>
       <th>State</th>
-      <th>Startdescription</th>
-      <th>Enddescription</th>
+      <th>start_description</th>
+      <th>end_description</th>
       <th></th>
       <th></th>
       <th></th>
@@ -17,11 +17,11 @@
   <tbody>
     <% @paths.each do |path| %>
       <tr>
-        <td><%= path.startNodeID %></td>
-        <td><%= path.endNodeID %></td>
+        <td><%= path.start_node_id %></td>
+        <td><%= path.end_node_id %></td>
         <td><%= path.state %></td>
-        <td><%= path.startDescription %></td>
-        <td><%= path.endDescription %></td>
+        <td><%= path.start_description %></td>
+        <td><%= path.end_description %></td>
         <td><%= link_to 'Show', path %></td>
         <td><%= link_to 'Edit', edit_path_path(path) %></td>
         <td><%= link_to 'Destroy', path, method: :delete, data: { confirm: 'Are you sure?' } %></td>

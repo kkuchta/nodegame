@@ -18,7 +18,7 @@ class PathsControllerTest < ActionController::TestCase
 
   test "should create path" do
     assert_difference('Path.count') do
-      post :create, path: { endDescription: @path.endDescription, endNodeID: @path.endNodeID, startDescription: @path.startDescription, startNodeID: @path.startNodeID, state: @path.state }
+      post :create, path: { end_description: @path.end_description, end_node_id: @path.end_node_id, start_description: @path.start_description, start_node_id: @path.start_node_id, state: @path.state }
     end
 
     assert_redirected_to path_path(assigns(:path))
@@ -35,7 +35,7 @@ class PathsControllerTest < ActionController::TestCase
   end
 
   test "should update path" do
-    patch :update, id: @path, path: { endDescription: @path.endDescription, endNodeID: @path.endNodeID, startDescription: @path.startDescription, startNodeID: @path.startNodeID, state: @path.state }
+    patch :update, id: @path, path: { end_description: @path.end_description, end_node_id: @path.end_node_id, start_description: @path.start_description, start_node_id: @path.start_node_id, state: @path.state }
     assert_redirected_to path_path(assigns(:path))
   end
 
