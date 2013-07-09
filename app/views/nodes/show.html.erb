@@ -1,18 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Description:</strongt >
-  <%= @node.description %>
+  <p>
+    <%= @node.description %>
+  </p>
+  <% @exits.each do |path| %>
+    <p>
+      <%= path.start_description %>
+    </p>
+  <% end %>
 </p>
 
-Options:
-<ul>
-  <% @node.exits().each do |path| %>
-    <li>
-      Exit = <%= link_to( path.start_description, path.end_node ) %>
-    </li>
+  <% @exits.each do |path| %>
+    <%= link_to( path.start_label, path.end_node, { class: 'path-button' } ) %>
   <% end %>
-</ul>
 
-<!-- <%= link_to 'Edit', edit_node_path(@node) %> |
-  <%= link_to 'Back', nodes_path %> -->

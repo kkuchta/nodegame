@@ -22,20 +22,24 @@ cabin_door_out = Path.create({
   start_node:cabin,
   end_node:meadow,
   state:'open',
-  start_description: "There is one door."
+  start_description: "There is one door.",
+  start_label: "Door"
 })
 
 cabin_door_in = Path.create({
   start_node:meadow,
   end_node:cabin,
   state:'open',
-  start_description: "There is a cabin with one door"
+  start_description: "There is a cabin with one door",
+  start_label: "Cabin"
 })
 
 path_to_forest = Path.create({
-  start_node:meadow
+  start_node:meadow,
   end_node:forest,
-  state:'open',
-  start_description: "A faded path disappears into a forest to the north."
+  state:"open",
+  start_description: "A faded path disappears into a forest to the north.",
+  start_label: "Path"
+})
 
 

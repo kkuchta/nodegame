@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20130701051923) do
 
   create_table "nodes", force: true do |t|
-    t.string   "description"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -23,8 +23,9 @@ ActiveRecord::Schema.define(version: 20130701051923) do
     t.integer  "start_node_id"
     t.integer  "end_node_id"
     t.string   "state",             default: "open"
-    t.string   "start_description"
-    t.string   "end_description"
+    t.string   "start_label"
+    t.text     "start_description"
+    t.text     "end_description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
