@@ -9,7 +9,7 @@ Options:
 <ul>
   <% @node.exits().each do |path| %>
     <li>
-      Exit = <%= path.start_description %>
+      Exit = <%= link_to( path.start_description, path.end_node ) %>
     </li>
   <% end %>
 </ul>
