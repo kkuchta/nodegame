@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20130701051923) do
 
   create_table "nodes", force: true do |t|
     t.text     "description"
+    t.integer  "max_exits"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
